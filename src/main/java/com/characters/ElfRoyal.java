@@ -26,15 +26,24 @@ public class ElfRoyal extends Elf implements Royal {
 
 	@Override
 	public void changeHealth() {
-		// TODO Auto-generated method stub
-
+		super.setHealth(health - 5);
 	}
 
 	@Override
 	public void changeMagic() {
-		// TODO Auto-generated method stub
-
+		super.setMagic(magic + 40);
 	}
 
+	public ElfRoyal makeElfRoyal(){
+		
+		ElfRoyal ourElfRoyal = new ElfRoyal(); 
+		
+		ourElfRoyal.changeHealth();
+		ourElfRoyal.changeMagic();
+		ourElfRoyal.setName(null);
+		ourElfRoyal.setWeapon(null);
+		
+		return ourElfRoyal;
+	}
 
 }

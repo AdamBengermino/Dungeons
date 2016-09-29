@@ -20,14 +20,12 @@ public class HumanWizard extends Human implements Wizard {
 
 	@Override
 	public void changeHealth() {
-		// TODO Auto-generated method stub
-
+		super.setHealth(health + 0);
 	}
 
 	@Override
 	public void changeMagic() {
-		// TODO Auto-generated method stub
-
+		super.setMagic(magic + 200);
 	}
 
 	@Override
@@ -35,5 +33,17 @@ public class HumanWizard extends Human implements Wizard {
 		// TODO Auto-generated method stub
 		super.setWeapon(Weapon.WAND);
 	}
-
+	
+	public HumanWizard makeHumanWizard(){
+		
+		HumanWizard ourHumanWizard = new HumanWizard(); 
+		
+		ourHumanWizard.changeHealth();
+		ourHumanWizard.changeMagic();
+		ourHumanWizard.setName(null);
+		ourHumanWizard.setWeapon(null);
+		
+		return ourHumanWizard; 
+		
+	}
 }

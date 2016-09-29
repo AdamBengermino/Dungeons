@@ -20,14 +20,12 @@ public class TurtleNinja extends Turtle implements Ninja {
 
 	@Override
 	public void changeHealth() {
-		// TODO Auto-generated method stub
-
+		super.setHealth(health + 20);
 	}
 
 	@Override
 	public void changeMagic() {
-		// TODO Auto-generated method stub
-
+		super.setMagic(magic - 5);
 	}
 
 	@Override
@@ -36,5 +34,16 @@ public class TurtleNinja extends Turtle implements Ninja {
 		super.setWeapon(Weapon.NUNCHUCK);
 	}
 
+	public TurtleNinja makeTurtleNinja(){
+		
+		TurtleNinja ourTurtleNinja = new TurtleNinja(); 
+		
+		ourTurtleNinja.changeHealth();
+		ourTurtleNinja.changeMagic();
+		ourTurtleNinja.setName(null);
+		ourTurtleNinja.setWeapon(null);
+		
+		return ourTurtleNinja;
+	}
 	
 }

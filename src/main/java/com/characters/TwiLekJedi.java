@@ -20,14 +20,12 @@ public class TwiLekJedi extends TwiLek implements Jedi {
 
 	@Override
 	public void changeHealth() {
-		// TODO Auto-generated method stub
-
+		super.setHealth(health + 50);
 	}
 
 	@Override
 	public void changeMagic() {
-		// TODO Auto-generated method stub
-
+		super.setMagic(magic + 100);
 	}
 
 	@Override
@@ -36,4 +34,15 @@ public class TwiLekJedi extends TwiLek implements Jedi {
 		super.setWeapon(Weapon.LIGHTSABER);
 	}
  
+	public TwiLekJedi makeTwiLekJedi(){
+		
+		TwiLekJedi ourTwiLekJedi = new TwiLekJedi(); 
+		
+		ourTwiLekJedi.changeHealth();
+		ourTwiLekJedi.changeMagic();
+		ourTwiLekJedi.setName(null);
+		ourTwiLekJedi.setWeapon(null);
+		
+		return ourTwiLekJedi;
+	}
 }

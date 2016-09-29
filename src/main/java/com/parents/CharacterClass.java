@@ -50,7 +50,7 @@ public class CharacterClass {
 		return weapon;
 	}
 
-	public void setWeapon(Weapon weapon) {
+	public void setWeapon(Weapon  weapon) {
 		this.weapon = weapon;
 	}
 
